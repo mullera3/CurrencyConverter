@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{% block head %}
+    {%if title%}
+        <title>{{title}}</title>
+    {% else %}
+        <title>Currency Converter</title>
+    {%endif%}
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/index.css')}}">
+{% endblock  %}
+
+{% block body %}
+
+    <header>
+        <h1>Currency Converter</h1>
+    </header>
+    <form action="" method="POST" novalidate>
+        {{form.hidden_tag() }}
+        {{form.date}}
+        {{form.amount.label}}
+        {{form.amount(size=32)}}
+    </form>
+    
+{% endblock  %} 
