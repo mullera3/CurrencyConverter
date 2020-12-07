@@ -16,8 +16,9 @@
     </header>
     <form action="" method="POST" novalidate>
         {{form.hidden_tag() }}
-        {{form.date}}
         {{form.amount.label}}
+        <!-- needs better formatting -->
+        {{form.date}} 
         {{form.amount(size=32)}}
     </form>
     
