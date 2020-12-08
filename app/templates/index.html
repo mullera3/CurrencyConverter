@@ -18,11 +18,12 @@
     </header>
     <section  class="converter">
         <table>
+            <!-- makes python class config usable html templates  -->
             {{form.hidden_tag()}}
-            {{country.hidden_tag()}}
+            {{country.hidden_tag()}} 
             <thead>
                 <tr>
-                    <td><span>{{country.base_country(width=10)}}</span> <span>{{country.conversion_country}}</span></td>
+                    <td><span></span>{{country.base_country}}</span> <span>{{country.conversion_country}}</span></td>
                 </tr>
             </thead>
             <tr>
