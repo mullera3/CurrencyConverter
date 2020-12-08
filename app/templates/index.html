@@ -6,6 +6,8 @@
     {% else %}
         <title>Currency Converter</title>
     {%endif%}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename= 'css/index.css')}}">
 {% endblock  %}
 
@@ -14,12 +16,23 @@
     <header>
         <h1>Currency Converter</h1>
     </header>
-    <form action="" method="POST" novalidate>
-        {{form.hidden_tag() }}
-        {{form.amount.label}}
-        <!-- needs better formatting -->
-        {{form.date}} 
-        {{form.amount(size=32)}}
-    </form>
+    <section  class="converter">
+        <table>
+            {{form.hidden_tag()}}
+            {{country.hidden_tag()}}
+            <thead>
+                <tr>
+                    <td><span>{{country.base_country(width=10)}}</span> <span>{{country.conversion_country}}</span></td>
+                </tr>
+            </thead>
+            <tr>
+                <td><span>{{form.amount.label}}: {{form.amount(size=32)}}</span></td>
+                <td>{{form.date}}</td>
+            </tr>
+        </table>
+    </section>
+        
+
+    
     
 {% endblock  %} 
