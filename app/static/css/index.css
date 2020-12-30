@@ -1,14 +1,33 @@
 body {
-    background-color: #BDC3C7;
-    font-family: 'Noto Sans', sans-serif;
+    background-color: #87ceeb;
+    font-family: 'Montserrat',
+    sans-serif;
 }
 
 header h1 {
     text-align: center;
 }
 
-.converter {
+header {
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+main {
+    padding: auto;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid black;
+    border: 2px solid #c2b280;
+}
+
+.center {
+    padding: 5%;
+}
+
+p {
+    padding: auto;
+}
+.navbar.navbar-expand-lg.navbar-light {
+    background-color: #c2b280;
 }

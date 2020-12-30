@@ -7,7 +7,9 @@
         <title>Currency Converter</title>
     {%endif%}
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{url_for('static', filename= 'css/index.css')}}">
 {% endblock  %}
 
@@ -16,24 +18,11 @@
     <header>
         <h1>Currency Converter</h1>
     </header>
-    <section  class="converter">
-        <table>
+    <main class="container">
             <!-- makes python class config usable html templates  -->
             {{form.hidden_tag()}}
             {{country.hidden_tag()}} 
-            <thead>
-                <tr>
-                    <td><span></span>{{country.base_country}}</span> <span>{{country.conversion_country}}</span></td>
-                </tr>
-            </thead>
-            <tr>
-                <td><span>{{form.amount.label}}: {{form.amount(size=32)}}</span></td>
-                <td>{{form.date}}</td>
-            </tr>
-        </table>
-    </section>
-        
-
-    
-    
+            <p> <span class="countryController">{{country.base_country}}</span> <span class="center"></span> <span class="countryController">{{country.conversion_country}}</span> </p>
+            <p><span>{{form.amount.label}}: {{form.amount(size=32)}}</span> <span>{{form.date}}</span></p>
+    </main>
 {% endblock  %} 
